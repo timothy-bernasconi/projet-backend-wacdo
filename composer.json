@@ -1,0 +1,15 @@
+{
+    "name": "tim/wacdo_backend",
+    "autoload": {
+        "psr-4": {
+            "Tim\\WacdoBackend\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Timothy Bernasconi",
+            "email": "tim.bernasconi1@gmail.com"
+        }
+    ],
+    "require": {}
+}
