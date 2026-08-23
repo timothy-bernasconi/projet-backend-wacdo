@@ -40,7 +40,7 @@ if(!empty($_POST)) { // Si pas vide, le form est soumis
         
         if ($query->execute()) {
             header("Location: login.php");
-            exit; // Toujours stopper l'exécution après une redirection
+            exit; 
         } else {
             $errors["execute"] = "Il y a un problème, veuillez réessayer";
         }
