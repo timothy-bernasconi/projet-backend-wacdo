@@ -83,3 +83,25 @@ INSERT INTO stock (id, productName, productCategory, price, quantity) VALUES
 (51, 'MC Wrap Poulet Bacon', 'wraps', 3.30, 50),
 (52, 'Ptit Wrap Chevre', 'wraps', 2.60, 50),
 (53, 'Ptit Wrap Ranch', 'wraps', 2.60, 50);
+
+CREATE TABLE orders (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    is_menu TINYINT(1) NOT NULL DEFAULT 0,
+    burger_id INT DEFAULT NULL,
+    burger_qty INT DEFAULT 0,
+    wrap_id INT DEFAULT NULL,
+    wrap_qty INT DEFAULT 0,
+    salade_id INT DEFAULT NULL,
+    salade_qty INT DEFAULT 0,
+    side_id INT DEFAULT NULL,
+    side_qty INT DEFAULT 0,
+    drink_id INT DEFAULT NULL,
+    drink_qty INT DEFAULT 0,
+    sauce_id INT DEFAULT NULL,
+    sauce_qty INT DEFAULT 0,
+    encas_id INT DEFAULT NULL,
+    encas_qty INT DEFAULT 0,
+    dessert_id INT DEFAULT NULL,
+    dessert_qty INT DEFAULT 0,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
