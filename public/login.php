@@ -23,9 +23,11 @@ if(!empty($result) && password_verify($password, $result["password"])) {
 
     $_SESSION["user"] = [
         "firstname" => $result["firstname"],
+        "position" => $result["position"],
         "ip" => $_SERVER["REMOTE_ADDR"]
     ];
     header("Location:index.php");
+    exit;
 } else {
     $message = " Impossible de vous connecter avec les informations saisies";
 }
