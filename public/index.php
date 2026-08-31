@@ -20,12 +20,14 @@ session_start();
 if(isset($_SESSION["user"])) {
     ?>
     <h3> <a href="my_account.php">Mon compte</a></h3>
+    <?php if (($_SESSION["user"]["position"] ?? '') === 'Admin'): ?>
+        <h3> <a href="account.php">Créer un compte collaborateur</a></h3>
+    <?php endif; ?>
     <h3> <a href="logout.php">Se déconnecter</a></h3>
     <?php
     } else {
         ?>
         <h3> <a href="login.php">Se connecter</a></h3>
-        <h3><a href="account.php">Créer un compte</a></h3>
         <?php
     }
     ?>

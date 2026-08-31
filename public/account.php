@@ -1,4 +1,15 @@
 <?php
+session_start();
+
+if (!isset($_SESSION["user"]) || $_SESSION["user"]["ip"] !== $_SERVER["REMOTE_ADDR"]) {
+    header("Location: login.php");
+    exit;
+}
+
+if (($_SESSION["user"]["position"] ?? '') !== 'Admin') {
+    header("Location: my_account.php");
+    exit;
+}
 
 $errors = array(); // Initialiser le tableau pour éviter toute erreur dans le HTML au premier chargement
 
@@ -39,7 +50,7 @@ if(!empty($_POST)) { // Si pas vide, le form est soumis
         $query->bindParam(":password", $hash);
         
         if ($query->execute()) {
-            header("Location: login.php");
+            header("Location: my_account.php");
             exit; 
         } else {
             $errors["execute"] = "Il y a un problème, veuillez réessayer";
