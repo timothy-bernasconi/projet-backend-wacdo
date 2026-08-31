@@ -1,6 +1,11 @@
 <?php
 session_start();
 
+if (!isset($_SESSION["user"]) || $_SESSION["user"]["ip"] !== $_SERVER["REMOTE_ADDR"]) {
+    header("Location: login.php");
+    exit;
+}
+
 // Connexion BDD
 try {
     $dsn = "mysql:host=localhost;dbname=dataTeam;charset=utf8mb4";
@@ -111,6 +116,7 @@ $orders = $db->query($sql)->fetchAll();
 </head>
 <body>
 
+<p><a href="my_account.php">← Retour à mon compte</a></p>
 <a href="order.php" class="btn-new">+ Passer une nouvelle commande</a>
 
 <h1>Commandes (<?= count($orders) ?>)</h1>

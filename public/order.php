@@ -1,6 +1,11 @@
 <?php
 session_start();
 
+if (!isset($_SESSION["user"]) || $_SESSION["user"]["ip"] !== $_SERVER["REMOTE_ADDR"]) {
+    header("Location: login.php");
+    exit;
+}
+
 // 1. Connexion BDD
 try {
     $dsn = "mysql:host=localhost;dbname=dataTeam;charset=utf8mb4";
@@ -139,6 +144,7 @@ $desserts = $db->query("SELECT id, productName, quantity FROM stock WHERE produc
 </head>
 <body>
 
+<p><a href="my_account.php">← Retour à mon compte</a></p>
 <h1>Prise de Commande</h1>
 
 <?php if ($message): ?>
