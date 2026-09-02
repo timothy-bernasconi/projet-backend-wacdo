@@ -66,6 +66,7 @@ if(!empty($_POST)) { // Si pas vide, le form est soumis
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Créer un compte</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -84,7 +85,7 @@ if(!empty($_POST)) { // Si pas vide, le form est soumis
         <br>
 
         <label for="InputLastName">Nom</label>
-        <input type="text" name="lastname" id="InputLastName" value ="<?= $lastname ?? "" ?>">>
+        <input type="text" name="lastname" id="InputLastName" value ="<?= $lastname ?? "" ?>">
         <?php if (isset($errors["lastname"])): ?>
             <p class="errors"><?= $errors["lastname"] ?></p>
         <?php endif; ?>
@@ -92,7 +93,7 @@ if(!empty($_POST)) { // Si pas vide, le form est soumis
         <br>
 
         <label for="InputPosition">Métier</label>
-        <input type="text" name="position" id="InputPosition" value ="<?= $position ?? "" ?>">>
+        <input type="text" name="position" id="InputPosition" value ="<?= $position ?? "" ?>">
         <?php if (isset($errors["position"])): ?>
             <p class="errors"><?= $errors["position"] ?></p>
         <?php endif; ?>

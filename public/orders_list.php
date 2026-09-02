@@ -101,6 +101,7 @@ $orders = $db->query($sql)->fetchAll();
 <head>
     <meta charset="UTF-8">
     <title>Liste des Commandes</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         body { font-family: sans-serif; margin: 30px; }
         .btn-new { background: #28a745; color: white; padding: 8px 12px; text-decoration: none; border-radius: 4px; }

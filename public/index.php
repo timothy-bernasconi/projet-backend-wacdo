@@ -9,6 +9,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Authentification</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -20,9 +21,7 @@ session_start();
 if(isset($_SESSION["user"])) {
     ?>
     <h3> <a href="my_account.php">Mon compte</a></h3>
-    <?php if (($_SESSION["user"]["position"] ?? '') === 'Admin'): ?>
-        <h3> <a href="account.php">Créer un compte collaborateur</a></h3>
-    <?php endif; ?>
+    
     <h3> <a href="logout.php">Se déconnecter</a></h3>
     <?php
     } else {

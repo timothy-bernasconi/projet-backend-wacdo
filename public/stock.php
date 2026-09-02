@@ -8,7 +8,7 @@ if (!isset($_SESSION["user"]) || $_SESSION["user"]["ip"] !== $_SERVER["REMOTE_AD
 }
 
 $role = $_SESSION["user"]["position"] ?? '';
-if (!in_array($role, ['Admin', 'Prep'])) {
+if (!in_array($role, ['Admin', 'Préparateur'])) {
     header("Location: my_account.php");
     exit;
 }
@@ -28,6 +28,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock - Wacdo</title>
+    <link rel="stylesheet" href="style.css">
     
 </head>
 <body>
