@@ -130,6 +130,7 @@ $desserts = $db->query("SELECT id, productName, quantity FROM stock WHERE produc
 <head>
     <meta charset="UTF-8">
     <title>Prise de Commande</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
         .form-row { display: flex; align-items: center; margin-bottom: 12px; gap: 10px; }

@@ -44,6 +44,7 @@ if(!empty($result) && password_verify($password, $result["password"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion plateforme wacdo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Connexion à la plateforme wacdo</h1>

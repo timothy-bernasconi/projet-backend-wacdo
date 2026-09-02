@@ -22,6 +22,7 @@ $role = $_SESSION["user"]["position"] ?? '';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compte employé</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -31,9 +32,13 @@ $role = $_SESSION["user"]["position"] ?? '';
 <h3><a href="order.php">Passer une commande</a></h3>
 <h3><a href="orders_list.php">Liste des commandes</a></h3>
 
-<?php if (in_array($role, ['Admin', 'Prep'])): ?>
+<?php if (in_array($role, ['Admin', 'Préparateur'])): ?>
     <h3><a href="stock.php">Gestion du stock</a></h3>
 <?php endif; ?>
+
+<?php if (($_SESSION["user"]["position"] ?? '') === 'Admin'): ?>
+        <h3> <a href="account.php">Créer un compte collaborateur</a></h3>
+    <?php endif; ?>
 
 <h3><a href="logout.php">Se déconnecter</a></h3>
 

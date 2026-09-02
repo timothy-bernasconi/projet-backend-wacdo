@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #FFF8E7;
+    color: #2b2b2b;
+    margin: 0;
+    padding: 0 20px 40px;
+}
+
+h1 {
+    background: #DA291C;
+    color: #FFC72C;
+    margin: 0 -20px 20px;
+    padding: 18px 20px;
+    font-size: 1.6em;
+}
+
+h2, h3 {
+    color: #DA291C;
+}
+
+a {
+    color: #DA291C;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select {
+    border: 2px solid #FFC72C;
+    border-radius: 4px;
+    padding: 6px;
+}
+
+button, input[type="submit"], .btn-new {
+    background: #DA291C;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+}
+
+button:hover, input[type="submit"]:hover, .btn-new:hover {
+    background: #b31f16;
+    text-decoration: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th {
+    background: #FFC72C;
+    color: #2b2b2b;
+    padding: 8px;
+    text-align: left;
+}
+
+td {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.errors {
+    color: #DA291C;
+    font-weight: bold;
+}
+
+.msg, .success {
+    background: #FFC72C;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+
+.error {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 15px 0;
+}
