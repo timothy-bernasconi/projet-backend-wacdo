@@ -1,7 +1,3 @@
-CREATE DATABASE IF NOT EXISTS dataTeam;
-
-USE dataTeam;
-
 CREATE TABLE IF NOT EXISTS employees (
     id INT PRIMARY KEY AUTO_INCREMENT,
     firstname VARCHAR(60),

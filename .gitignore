@@ -4,3 +4,4 @@
 *.log
 .idea/
 .vscode/
+public/config.php

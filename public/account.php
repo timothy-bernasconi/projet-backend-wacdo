@@ -39,8 +39,7 @@ if(!empty($_POST)) { // Si pas vide, le form est soumis
     if (empty($errors)) {
         $hash = password_hash($password, PASSWORD_DEFAULT);
 
-        $dsn = "mysql:host=localhost;dbname=dataTeam";
-        $db  = new PDO ($dsn, "root", "root");
+        require __DIR__ . '/config.php';
         
         $query = $db->prepare("INSERT INTO employees(firstname, lastname, position, email, password) VALUES(:firstname, :lastname, :position, :email, :password)");
         $query->bindParam(":firstname", $firstname);

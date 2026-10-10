@@ -14,8 +14,7 @@ if (!in_array($role, ['Admin', 'Préparateur'])) {
 }
 
 
-$dsn = "mysql:host=localhost;dbname=dataTeam;charset=utf8mb4";
-$db  = new PDO($dsn, "root", "root");
+require __DIR__ . '/config.php';
 
 // 3. Récupération des produits
 $stmt = $db->query("SELECT * FROM stock ORDER BY productName ASC");

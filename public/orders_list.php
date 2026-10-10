@@ -7,15 +7,7 @@ if (!isset($_SESSION["user"]) || $_SESSION["user"]["ip"] !== $_SERVER["REMOTE_AD
 }
 
 // Connexion BDD
-try {
-    $dsn = "mysql:host=localhost;dbname=dataTeam;charset=utf8mb4";
-    $db  = new PDO($dsn, "root", "root", [
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
-    ]);
-} catch (PDOException $e) {
-    die("Erreur BDD : " . $e->getMessage());
-}
+require __DIR__ . '/config.php';
 
 // Supprimer une commande et actualiser stock
 if (isset($_GET['delete'])) {
